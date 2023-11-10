@@ -124,7 +124,7 @@ with tab1:
     st.pyplot(create_weighted_pie_chart(data_pactol, 'PACTOL Activity Distribution'))
 
     st.header('Alcordo Activity Distribution')
-    st.pyplot(create_weighted_pie_chart(data_alocardo, 'Alocardo Activity Distribution'))
+    st.pyplot(create_weighted_pie_chart(data_alocardo, 'Alcordo Activity Distribution'))
 
     st.header('Guinita Activity Distribution')
     st.pyplot(create_weighted_pie_chart(data_guinita, 'Guinita Activity Distribution'))
