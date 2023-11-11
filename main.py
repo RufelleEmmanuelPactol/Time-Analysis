@@ -146,3 +146,4 @@ with tab5:
     st.pyplot(create_weighted_activity_value_chart(all_data))
 
 # Make sure to replace 'compiled_data.xlsx' with the correct path to your Excel file.
+print("hello")
