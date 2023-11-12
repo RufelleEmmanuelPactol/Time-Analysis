@@ -95,7 +95,7 @@ def categorize_time_of_day(time_str):
         time_obj = pd.to_datetime(time_str, format='%H:%M').time()
     except ValueError:
         # Return 'Unknown' if time_str is not a valid time
-        return "Unknown"
+        return "Dawn"
 
         # Return the part of the day based on the time
     if time_obj.hour < 6:
