@@ -201,3 +201,5 @@ with st.container():
         st.write("")
         with col6: 
             st.plotly_chart(activity_value_chart)
+
+            #revised dash finished
