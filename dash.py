@@ -27,7 +27,7 @@ header_html = """
     <div style='
         text-align: center;
         color: #004080;
-        background-color: #CE93D8;
+        background-color: #ADD8E6;
         padding: 5px;
         border-radius: 10px;
         margin-bottom: 20px;
@@ -47,6 +47,9 @@ plotly_colors = px.colors.qualitative.Set1
 
 # Define a color-blind-friendly color palette for Plotly Express
 color_blind_palette = px.colors.colorbrewer.Paired
+
+# Streamlit app layout with HTML-formatted title
+st.markdown("<h2 style='text-align: center; color: #ADD8E6;'>Activity and Emotion Distribution Analysis</h2>", unsafe_allow_html=True)
 
 def create_emotion_activity_chart(crosstab, background_color='white'):
     fig = go.Figure()
@@ -91,8 +94,6 @@ def create_weighted_activity_value_chart(data, background_color='white'):
     fig.update_layout(plot_bgcolor=background_color)
     return fig
 
-# Streamlit app layout
-st.title('Activity and Emotion Distribution Analysis')
 
 def create_emotion_activity_chart(crosstab):
     fig, ax = plt.subplots(figsize=(10, 6))
@@ -144,8 +145,6 @@ data_guinita['Emotion Category'] = data_guinita['How I feel'].map(emotion_mappin
 # Combine all data for the aggregated analysis
 all_data = pd.concat([data_pactol, data_alocardo, data_guinita])
 
-# Streamlit app layout
-st.title('Activity and Emotion Distribution Analysis')
 
 # List of options for the drop-down menu
 activity_options = ['Pactol', 'Alcordo', 'Guinita']
